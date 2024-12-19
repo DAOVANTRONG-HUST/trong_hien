@@ -870,37 +870,23 @@ em {
     $(':root').css('--secondary-color', '');
 </script>
 <script>
-
-  $(document).ready(function() {
-    var first_run = true;
-    var myAudio = document.getElementById("audio_play");
-
-    // Lắng nghe sự kiện di chuột hoặc chạm vào màn hình
-    if (first_run) 
-    {
-      window.addEventListener('mousemove', () => {myAudio.play(); first_run = false} );
-      window.addEventListener('touchstart', () => {myAudio.play(); first_run = false});
-    }
-
-
-    // myAudio.play();
-    if (myAudio.paused) {
-      $('.btn_play').html('<i class="ti ti-player-play "></i>')
-    }
-    else{
-      $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
-    }
-    function togglePlay() {
-      
-      if (myAudio.paused) {
-        myAudio.play();
-        $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
-      } else {
-      myAudio.pause();
-      $('.btn_play').html('<i class="ti ti-player-play "></i>')
-      }
-    };
-  });
-
-
+  var myAudio = document.getElementById("audio_play");
+  myAudio.play();
+  if (myAudio.paused) {
+    $('.btn_play').html('<i class="ti ti-player-play "></i>')
+  }
+  else{
+    $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
+  }
+ function togglePlay() {
+  
+  if (myAudio.paused) {
+    myAudio.play();
+    $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
+  } else {
+  myAudio.pause();
+  $('.btn_play').html('<i class="ti ti-player-play "></i>')
+  }
+  
+};
 </script></body></html>
