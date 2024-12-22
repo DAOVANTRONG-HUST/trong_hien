@@ -19692,7 +19692,7 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all {
   .card,
   .card-body,
   .media,
@@ -21462,7 +21462,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
     transition-property: margin-left, margin-right, width;
   }
 }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all {
   .menu,
   .layout-menu,
   .layout-page,

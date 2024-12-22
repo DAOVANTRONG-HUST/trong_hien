@@ -96,6 +96,10 @@ canvas, img, svg, video {
     }
 }  
 
+.gift-flex {
+  display: flex;
+}
+
 /* Nút quà tặng */
 .gift-button {
   z-index: 999;
@@ -733,11 +737,17 @@ em {
         <div class="uk-modal-body ">
           <div class="uk-grid uk-child-width-1-2@m" uk-grid="">
             <div>
-              <div class="gift-bride uk-text-center uk-card-default uk-padding-small">
-                <p><img decoding="async" class="alignnone size-medium wp-image-2119" src="images/ACB.jpg" alt="" width="300" height="225"  sizes="(max-width: 300px) 100vw, 300px"></p>
-                <p><strong>Đào Văn Trọng</strong></p>
-                <p>Ngân hàng : <strong>ACB</strong></p>
-                <p>STK :<strong>8376577</strong></p>
+              <div>
+                <div class="gift-groom uk-text-center uk-card-default uk-padding-small">
+                  <p><img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-2119" src="images/ACB.jpg" alt="" width="300" height="225"  sizes="(max-width: 300px) 100vw, 300px"></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="gift-bride uk-text-center uk-card-default uk-padding-small">
+                  <p><img decoding="async" class="alignnone size-medium wp-image-2119" src="images/VCB.jpg" alt="" width="300" height="225"  sizes="(max-width: 300px) 100vw, 300px"></p>
+                </div>
               </div>
             </div>
           </div>
