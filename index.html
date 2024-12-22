@@ -835,24 +835,36 @@ em {
     $(':root').css('--secondary-color', '');
 </script>
 <script>
-  var myAudio = document.getElementById("audio_play");
-  myAudio.play().catch(err => {});
-  if (myAudio.paused) {
-    $('.btn_play').html('<i class="ti ti-player-play "></i>')
+  document.addEventListener("DOMContentLoaded", function () {
+    var myAudio = document.getElementById("audio_play");
+
+    // Tự động phát khi tải xong trang
+    myAudio.play().then(() => {
+      $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music"></i></span>');
+    }).catch(err => {
+      // Nếu bị chặn, hiển thị nút play
+      $('.btn_play').html('<i class="ti ti-player-play"></i>');
+    });
+
+    // Kiểm tra trạng thái phát nhạc
+    if (myAudio.paused) {
+      $('.btn_play').html('<i class="ti ti-player-play"></i>');
+    } else {
+      $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music"></i></span>');
+    }
+  });
+
+  function togglePlay() {
+    var myAudio = document.getElementById("audio_play");
+
+    if (myAudio.paused) {
+      myAudio.play();
+      $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music"></i></span>');
+    } else {
+      myAudio.pause();
+      $('.btn_play').html('<i class="ti ti-player-play"></i>');
+    }
   }
-  else{
-    $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
-  }
- function togglePlay() {
-  
-  if (myAudio.paused) {
-    myAudio.play();
-    $('.btn_play').html('<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>')
-  } else {
-  myAudio.pause();
-  $('.btn_play').html('<i class="ti ti-player-play "></i>')
-  }
-  
-};
-</script></body>
+</script>
+</body>
 </html>
