@@ -53,7 +53,7 @@
     font-weight: 400;
 }
 /* main font */
-@font-face {
+/* @font-face {
     font-family: main-font;
     src: url(../font/SVN-Gilroy\ Regular.otf);
     font-weight: 400;
@@ -67,7 +67,7 @@
     font-family: main-font;
     src: url(../font/SVN-Gilroy\ Bold.otf);
     font-weight: 700;
-}
+} */
 /* -------------- */
 @font-face {
     font-family: main-font2;

@@ -837,7 +837,7 @@ em {
 </script>
 <script>
   var myAudio = document.getElementById("audio_play");
-  myAudio.play();
+  setTimeout(() => myAudio.play(), 5);
   if (myAudio.paused) {
     $('.btn_play').html('<i class="ti ti-player-play "></i>')
   }
